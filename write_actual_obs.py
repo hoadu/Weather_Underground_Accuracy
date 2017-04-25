@@ -3,6 +3,7 @@ import csv
 import time
 
 
+
 def get_actual_obs():
 
     # all of these variable could be passed to the function through other means
@@ -21,9 +22,9 @@ def get_actual_obs():
     state6 = 'WA'
     year = 2016
     start_month = 3
-    start_day = 2
-    end_month = 6
-    end_day = 2
+    start_day = 4
+    end_month = 3
+    end_day = 4
     # generate a formatted list of all the dates you would like to collect info for
     date_range = date_gen(year, start_month, start_day, end_month, end_day)
 
@@ -46,3 +47,5 @@ def get_actual_obs():
             time.sleep(7)
             # write the place info to a csv which will appear as 'date, high temp, low temp, precipitation'
             history_writer.writerow(place1 + place2 + place3 + place4 + place5 + place6)
+
+get_actual_obs()
